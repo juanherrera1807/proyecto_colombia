@@ -368,6 +368,10 @@ import { useSedesEmpresa } from "../stores/store";
           await addDoc(collection(db, 'sedesempresa'), {
             empresa: this.selEmpresas,
             sede: this.selSedes,
+            serial: " ",
+            placa: " ",
+            fecha: " ",
+            observacion: " ",
             // Otros campos si es necesario
           });
 

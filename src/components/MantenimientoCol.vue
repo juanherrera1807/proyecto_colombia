@@ -69,6 +69,9 @@
                   <v-col cols="12" sm="6" md="4">
                     <v-text-field v-model="editedItem.placa" label="placa"></v-text-field>
                   </v-col>
+                  <v-col cols="12" sm="6" md="4">
+                    <v-text-field v-model="editedItem.fecha" label="fecha"></v-text-field>
+                  </v-col>
                   <v-col>
                     <v-text-field v-model="editedItem.observacion" label="observacion"></v-text-field>
                   </v-col>
@@ -142,6 +145,7 @@
         { title: 'Sede', align: 'end', key: 'sede' },
         { title: 'Serial', align: 'end', key: 'serial' },
         { title: 'Placa', align: 'end', key: 'placa' },
+        { title: 'Fecha', align: 'end', key: 'fecha' },
         { title: 'Observacion', align: 'end', key: 'observacion' },
         { title: 'Actions', key: 'actions', sortable: false },
       ],
@@ -155,6 +159,7 @@
         sede: ' ',
         serial: ' ',
         placa: ' ',
+        fecha:' ',
         observacion: ' '
       },
       defaultItem: {
@@ -162,6 +167,7 @@
         sede: ' ',
         serial: ' ',
         placa: ' ',
+        fecha: ' ',
         observacion:' '
       },
   
@@ -196,6 +202,7 @@
             sede: ' ',
             serial: ' ',
             placa:' ',
+            fecha: ' ',
             observacion: ' '
   
           },
@@ -213,6 +220,7 @@
             sede: doc.data().sede,
             serial: doc.data().serial,
             placa: doc.data().placa,
+            fecha: doc.data().fecha,
             observacion: doc.data().observacion
           })
         });
@@ -225,6 +233,7 @@
           sede: this.editedItem.sede,
           placa: this.editedItem.placa,
           serial: this.editedItem.serial,
+          fecha: this.editedItem.fecha,
           observacion: this.editedItem.observacion
   
         })
@@ -245,6 +254,7 @@
           sede: this.editedItem.sede,
           serial: this.editedItem.serial,
           placa: this.editedItem.placa,
+          fecha: this.editedItem.fecha,
           observacion: this.editedItem.observacion,
           
         }
@@ -267,6 +277,7 @@
             sede: doc.data().sede,
             serial: doc.data().serial,
             placa: doc.data().placa,
+            fecha: doc.data().fecha,
             observacion: doc.data().observacion
           });
         }); console.log('listado')
